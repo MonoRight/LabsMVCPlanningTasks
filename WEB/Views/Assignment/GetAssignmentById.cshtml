@@ -1,0 +1,65 @@
+﻿@model WEB.Models.AssignmentViewModel
+
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetAssignmentById</title>
+</head>
+<body>
+    <div>
+        <h4>Assignment with id @Model.Id: </h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Priority)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Priority)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TimeToDo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TimeToDo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ProgrammerId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProgrammerId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.StatusTaskId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StatusTaskId)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "UpdateAssignment", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+INSERT INTO dbo.StatusTasks(DateTime, Status) VALUES(CAST('2020-11-23 15:32:06.427' AS DateTime), 'given');
+INSERT INTO dbo.StatusTasks(DateTime, Status) VALUES(CAST('2020-11-23 16:48:08.400' AS DateTime), 'closed');
+INSERT INTO dbo.StatusTasks(DateTime, Status) VALUES(CAST('2020-11-24 12:12:08.400' AS DateTime), 'given');
+INSERT INTO dbo.StatusTasks(DateTime, Status) VALUES(CAST('2020-11-24 13:11:08.400' AS DateTime), 'closed');
+
+INSERT INTO dbo.Programmers(Name, Surname, NumOfTusks) VALUES('Dmytro', 'Parkhomenko', 2);
+INSERT INTO dbo.Programmers(Name, Surname, NumOfTusks) VALUES('Olha', 'Moshytska', 1);
+INSERT INTO dbo.Programmers(Name, Surname, NumOfTusks) VALUES('Anatolii', 'Belov', 2);
+INSERT INTO dbo.Programmers(Name, Surname, NumOfTusks) VALUES('Kate', 'Juravleva', 1);
+
+INSERT INTO dbo.Assignments(Description, Priority, TimeToDo, ProgrammerId, StatusTaskId) VALUES('make DB', 1, 10, 1, 1);
+INSERT INTO dbo.Assignments(Description, Priority, TimeToDo, ProgrammerId, StatusTaskId) VALUES('Bag', 2, 4, 2, 3);

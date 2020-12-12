@@ -1,0 +1,50 @@
+﻿@model WEB.Models.ProgrammerViewModel
+
+@{
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <div>
+        <h4>Programmer with id "@Html.DisplayFor(model=>model.Id)":</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Surname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Surname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NumOfTusks)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NumOfTusks)
+            </dd>
+    
+        </dl>
+    </div>
+    <p> 
+     @Html.ActionLink("Edit", "UpdateProgrammer", new { id = Model.Id }) |
+     @Html.ActionLink("Back to List", "Index", "Programmer")
+    </p>
+</body>
+</html>

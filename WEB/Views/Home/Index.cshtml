@@ -1,0 +1,121 @@
+﻿@model IEnumerable<WEB.Models.AssignmentViewModel>
+
+@{
+    ViewBag.Title = "All tables";
+}
+
+<h2 class="well" style="text-align: center">Tables</h2>
+<h3 class="alert-info">Assignments:</h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeToDo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Priority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgrammerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusTaskId)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TimeToDo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Priority)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProgrammerId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StatusTaskId)
+    </td>
+</tr>
+    }
+
+</table>
+
+<h3 class="alert-info">Programmers:</h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Id")
+        </th>
+        <th>
+            @Html.DisplayName("Name")
+        </th>
+        <th>
+            @Html.DisplayName("Surname")
+        </th>
+        <th>
+            @Html.DisplayName("Number of tasks")
+        </th>
+    </tr>
+
+    @foreach (var item in ViewBag.Programmers)
+    {
+<tr>
+    <td>
+        @item.Id
+    </td>
+    <td>
+        @item.Name
+    </td>
+    <td>
+        @item.Surname
+    </td>
+    <td>
+        @item.NumOfTusks
+    </td>
+</tr>
+    }
+</table>
+
+<h3 class="alert-info">TaskStatus:</h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Id")
+        </th>
+        <th>
+            @Html.DisplayName("DateTime")
+        </th>
+        <th>
+            @Html.DisplayName("Status")
+        </th>
+    </tr>
+
+    @foreach (var item in ViewBag.Status)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.DateTime
+            </td>
+            <td>
+                @item.Status
+            </td>
+        </tr>
+    }
+</table>
